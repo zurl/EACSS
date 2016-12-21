@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Extraordinarily Automatic Course Selection System</title>
+    <style>
+        body,html{
+            margin:0; height:100%;
+        }
+        table{
+            width : 70%;
+            height: 70%;
+        }
+        tr{
+            width: 100%;
+            height: 5%;
+        }
+        td{
+            width: 10%;
+        }
+        .selected{
+            background-color: cyan;
+        }
+        .non-selected{
+            background-color: gray;
+        }
+        .close{
+            background-color: black;
+        }
+        #right-base{
+            float: right;
+            padding-right: 20px;
+            max-width: 28%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        course selection system
+        <button onclick="switchSemester(this)">春</button>
+        <button onclick="save()">save</button>
+        <button onclick="load()">load</button>
+        <hr />
+    </header>
+    <div id="right-base">
+        <div id="right">
+            已选上的课程
+            <ul>
+                <li> nihao </li>
+                <li> fuck </li>
+            </ul>
+        </div>
+        <div>
+            手动选课
+            <label> 课程名称 <input id="course-name"></label>
+            <ul id="manual-result"></ul>
+        </div>
+    </div>
+    <table id="course-view">
+
+    </table>
+    <hr />
+    <label>
+        filter condition
+        <textarea id="filter">true</textarea>
+        <button onclick="onFilter()"> filter </button>
+    </label>
+    <label>
+        cmp condition
+        <textarea id="cmp">x.college=="计算机科学与技术学院"</textarea>
+        <button onclick="onCmp()"> cmp </button>
+    </label>
+    <footer>
+        <hr />
+        This program open source under the MIT License <br/>
+        zhang chengyi 2016, All rights reserved.
+    </footer>
+
+</body>
+<script src="data.js"></script>
+<script src="main.js"></script>
+</html>
